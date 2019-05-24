@@ -1,9 +1,9 @@
-package org.neo4j.tinkerpop.api.impl;
+package neo4j;
 
+import neo4j.structure.api.Neo4jFactory;
+import neo4j.structure.api.Neo4jGraphAPI;
 import org.neo4j.graphdb.factory.GraphDatabaseBuilder;
 import org.neo4j.graphdb.factory.GraphDatabaseFactory;
-import org.neo4j.tinkerpop.api.Neo4jFactory;
-import org.neo4j.tinkerpop.api.Neo4jGraphAPI;
 
 import java.io.File;
 import java.net.MalformedURLException;

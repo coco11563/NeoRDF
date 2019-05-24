@@ -16,23 +16,21 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with neo4j-tinkerpop-binding.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.neo4j.tinkerpop.api.impl;
+package neo4j;
 
 
+import neo4j.structure.api.Neo4jGraphAPI;
+import neo4j.structure.api.Neo4jNode;
+import neo4j.structure.api.Neo4jRelationship;
+import neo4j.structure.api.Neo4jTx;
 import org.neo4j.graphdb.GraphDatabaseService;
 import org.neo4j.graphdb.Label;
-import org.neo4j.graphdb.PropertyContainer;
 import org.neo4j.graphdb.schema.IndexDefinition;
 import org.neo4j.helpers.collection.IteratorWrapper;
 import org.neo4j.kernel.impl.core.EmbeddedProxySPI;
 import org.neo4j.kernel.impl.core.GraphProperties;
 import org.neo4j.kernel.impl.core.GraphPropertiesProxy;
 import org.neo4j.kernel.internal.GraphDatabaseAPI;
-import org.neo4j.kernel.lifecycle.Lifecycle;
-import org.neo4j.tinkerpop.api.Neo4jGraphAPI;
-import org.neo4j.tinkerpop.api.Neo4jNode;
-import org.neo4j.tinkerpop.api.Neo4jRelationship;
-import org.neo4j.tinkerpop.api.Neo4jTx;
 
 import java.util.Collections;
 import java.util.Iterator;

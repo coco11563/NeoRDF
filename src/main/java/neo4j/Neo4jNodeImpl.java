@@ -16,18 +16,18 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with neo4j-tinkerpop-binding.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.neo4j.tinkerpop.api.impl;
+package neo4j;
 
+import neo4j.structure.api.Neo4jDirection;
+import neo4j.structure.api.Neo4jNode;
+import neo4j.structure.api.Neo4jRelationship;
 import org.neo4j.graphdb.*;
 import org.neo4j.helpers.collection.IterableWrapper;
-import org.neo4j.tinkerpop.api.Neo4jDirection;
-import org.neo4j.tinkerpop.api.Neo4jNode;
-import org.neo4j.tinkerpop.api.Neo4jRelationship;
 
 
 import java.util.Set;
 
-import static org.neo4j.tinkerpop.api.impl.Util.wrap;
+import static neo4j.Util.wrap;
 import static org.neo4j.graphdb.RelationshipType.withName;
 
 /**

@@ -1,7 +1,7 @@
 package pub.sha0w.NeoRDF;
 
-import org.apache.tinkerpop.gremlin.neo4j.structure.Neo4jGraph;
-import org.apache.tinkerpop.gremlin.neo4j.structure.Neo4jVertex;
+import neo4j.structure.Neo4jGraph;
+import neo4j.structure.Neo4jVertex;
 import org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal;
 import sparql.SparqlToGremlinCompiler;
 

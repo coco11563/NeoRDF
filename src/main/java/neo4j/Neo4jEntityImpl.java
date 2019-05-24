@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with neo4j-tinkerpop-binding.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.neo4j.tinkerpop.api.impl;
+package neo4j;
 
 
+import neo4j.structure.api.Neo4jEntity;
 import org.neo4j.graphdb.Node;
 import org.neo4j.graphdb.PropertyContainer;
 import org.neo4j.graphdb.Relationship;
-import org.neo4j.tinkerpop.api.Neo4jEntity;
 
 /**
  * @author mh

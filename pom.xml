@@ -26,13 +26,12 @@
             <artifactId>neo4j</artifactId>
             <version>3.4.0</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.tinkerpop/sparql-gremlin -->
-        <!-- https://mvnrepository.com/artifact/org.apache.tinkerpop/neo4j-gremlin -->
         <dependency>
             <groupId>org.apache.tinkerpop</groupId>
-            <artifactId>neo4j-gremlin</artifactId>
+            <artifactId>gremlin-core</artifactId>
             <version>3.4.0</version>
         </dependency>
+
         <dependency>
             <groupId>org.apache.jena</groupId>
             <artifactId>apache-jena-libs</artifactId>

@@ -16,36 +16,39 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with neo4j-tinkerpop-binding.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.neo4j.tinkerpop.api.impl;
+package neo4j;
 
+import neo4j.structure.api.Neo4jTx;
+import org.neo4j.graphdb.Transaction;
 
-import org.neo4j.graphdb.Relationship;
-import org.neo4j.tinkerpop.api.Neo4jNode;
-import org.neo4j.tinkerpop.api.Neo4jRelationship;
+/**
+ * @author mh
+ * @since 25.03.15
+ */
+public class Neo4jTxImpl implements Neo4jTx {
+    private final Transaction tx;
 
-public class Neo4jRelationshipImpl extends Neo4jEntityImpl<Relationship> implements Neo4jRelationship {
-
-    public Neo4jRelationshipImpl(Relationship rel) {
-        super(rel);
+    Neo4jTxImpl(Transaction tx) {
+        this.tx = tx;
     }
 
     @Override
-    public String type() {
-        return entity.getType().name();
+    public void failure() {
+        tx.failure();
     }
 
     @Override
-    public Neo4jNode start() {
-        return new Neo4jNodeImpl(entity.getStartNode());
+    public void success() {
+        tx.success();
     }
 
     @Override
-    public Neo4jNode end() {
-        return new Neo4jNodeImpl(entity.getEndNode());
+    public void close() {
+        tx.close();
     }
 
     @Override
-    public Neo4jNode other(Neo4jNode node) {
-        return new Neo4jNodeImpl(entity.getOtherNode((((Neo4jNodeImpl) node).entity)));
+    public String toString() {
+        return this.tx.toString();
     }
 }
